@@ -1,0 +1,21 @@
+{
+  "name": "ICX03",
+  "authors": [
+    "TheoDel <theo.deldel@gmail.com>"
+  ],
+  "description": "ICX03 experiment fictional interface",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"
+          media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<nav class="indigo darken-4">
+    <div class="nav-wrapper">
+        <div class="container">
+            <ul class="left">
+                <li><a href="#" id="exit_button" hidden><i class="material-icons left">keyboard_return</i><span id="identite">Quitter l'expérience</span></a>
+                </li>
+            </ul>
+            <ul class="right">
+                <li><a href="#"><i class="material-icons left">person</i><span id="first_name_display"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="margin-top:20px">
+    <div class="row" id="part1" >
+        <div class="col s10 offset-m1 m8 offset-m2 l6 offset-l3">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row center-align">
+                        <div><i class="large material-icons">person</i></div>
+                        <div class="card-title">Bienvenue</div>
+                        <form>
+                                <div class="input-field">
+                                    <input id="first_name_input" type="text" class="validate">
+                                    <label for="first_name_input">Entrez votre prénom</label>
+                                </div>
+                            <div class="smalltext">Celui-ci sera effacé quand vous arrêterez l'expérience.</div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a class="btn-floating btn-large waves-effect waves-light indigo darken-4" id="start_button">
+                        <i class="large material-icons">play_arrow</i>
+                    </a>
+                    <div class="smalltext">Commencer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="part2" hidden>
+        <div class="col s10 offset-m1 m8 offset-m2 l6 offset-l3">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row valign-wrapper">
+                        <div class="col s2">
+                            <i class="medium material-icons">person</i>
+                        </div>
+                        <div class="col s10">
+                            <div><a href="#">Un ami</a> a partagé la photo de <a href="#">VISIO Festival</a>.</div>
+                            <div class="smalltext">Le 16 décembre, 12h06.</div>
+                        </div>
+                    </div>
+                    <p>Je participe à un concours de photographie afin de gagner une entrée au prochain festival VISIO, en Finlande ! Svp votez pour ma photo en cliquant un maximum de fois sur le coeur ! Merci !
+                        <img src="media/smile2.png"><img src="media/smile2.png"><img src="media/smile2.png"> </p>
+                </div>
+                <div class="card-image">
+                    <img src="media/photo_post.jpg">
+                </div>
+                <div class="card-action center-align">
+                    <a class="btn-floating btn-large waves-effect waves-light indigo darken-4" id="like_button">
+                        <i id="like_icon" class="large material-icons">favorite</i>
+                        <span id="compteur_display" hidden data-position="bottom" data-delay="50" data-tooltip="I am tooltip">0</span>
+                    </a>
+                    <div class="smalltext" id="max_likes_msg" hidden>Vous avez atteint le nombre maximal de likes, merci !</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="part3" hidden>
+        <div class="col s10 offset-m1 m8 offset-m2 l6 offset-l3">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row center-align">
+                        <div><i class="large material-icons">person</i></div>
+                        <div class="card-title">Merci</div>
+                        <p>pour votre participation !</p>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a class="btn-floating btn-large waves-effect waves-light indigo darken-4" id="button_stats">
+                        <i class="large material-icons">insert_chart</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="common.js"></script>
+
+</body>
+</html>
