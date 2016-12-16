@@ -17,8 +17,11 @@ var compteurAttente = 0;
 
 startButton.click(function(){
     exitButton.css("display","inline-block");
-    prenom = $("#first_name_input").val();
-    $("#first_name_display").text(prenom);
+
+    if($("#first_name_input").length>0){
+        prenom = $("#first_name_input").val();
+        $("#first_name_display").text(prenom);
+    }
 
     $("#part1").slideUp();
     $("#part2").slideDown();
@@ -39,6 +42,11 @@ likeButton.click(function () {
         $("#max_likes_msg").show();
     }
 
+    if(prenom==""){
+        Materialize.toast('Votre ami a reçu un vote !', 5000);
+    } else {
+        Materialize.toast('<i class="material-icons text-white amber">person</i>&nbsp; Votre ami a reçu le vote de '+prenom+'!', 5000);
+    }
 });
 
 exitButton.click(function(){
@@ -49,7 +57,7 @@ exitButton.click(function(){
 });
 
 $("#button_stats").click(function(){
-    Materialize.toast('Nb de clicks : '+ countClicks+"", 3000, 'rounded')
+    Materialize.toast('Nb de clicks : '+ countClicks+"", 5000);
 });
 
 function startCompteur(){
